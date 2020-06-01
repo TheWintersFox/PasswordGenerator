@@ -187,12 +187,52 @@ function generatePassword() {
                 return finalPassword;
             }
 
-            // User denys first, third, and last entry = uppercaseConfirm, lowercaseConfirm, numericalConfirm = False
-            // User Confirms Second entry = specialConfirm = True
+            // User denys first, third, and last entry = uppercaseConfirm, specialConfirm, numericalConfirm = False
+            // User Confirms Second entry = lowercaseConfirm = True
+
         } else if (uppercaseConfirm == false && lowercaseConfirm == true && specialConfirm == false && numericalConfirm == false) {
             for (i = 0; i < passwordLength; i++) {
                 let characterType = Math.floor(Math.random() * 1);
 
+
+                if (characterType == 1) {
+                    let randomLower = lowercase[Math.floor(Math.random() * lowercase.length)];
+                    passwordArray[i] = randomLower;
+                }
+                let finalPassword = passwordArray.join("");
+                console.log(finalPassword);
+                return finalPassword;
+            }
+
+
+            // User Confirms first, third, and fourth entry = uppercaseConfirm, specialConfirm, numericalConfirm = True
+            // User denys Second entry = lowercaseConfirm = False
+
+        } else if (uppercaseConfirm == true && lowercaseConfirm == false && specialConfirm == true && numericalConfirm == true) {
+            for (i = 0; i < passwordLength; i++) {
+                let characterType = Math.floor(Math.random() * 3);
+
+                if (characterType == 0) {
+                    let randomUpper = uppercase[Math.floor(Math.random() * uppercase.length)];
+                    passwordArray[i] = randomUpper;
+                } else if (characterType == 2) {
+                    let randomSpecial = special[Math.floor(Math.random() * special.length)];
+                    passwordArray[i] = randomSpecial;
+                } else if (characterType == 3) {
+                    let randomNumber = numerical[Math.floor(Math.random() * 10)];
+                    passwordArray[i] = randomNumber;
+                }
+                let finalPassword = passwordArray.join("");
+                console.log(finalPassword);
+                return finalPassword;
+            }
+
+            // User denys first, second, and fourth entry = uppercaseConfirm, lowercaseConfirm, numericalConfirm = False
+            // User Confirms third entry = specialConfirm = True
+
+        } else if (uppercaseConfirm == false && lowercaseConfirm == false && specialConfirm == true && numericalConfirm == false) {
+            for (i = 0; i < passwordLength; i++) {
+                let characterType = Math.floor(Math.random() * 1);
 
                 if (characterType == 2) {
                     let randomSpecial = special[Math.floor(Math.random() * special.length)];
@@ -202,4 +242,65 @@ function generatePassword() {
                 console.log(finalPassword);
                 return finalPassword;
             }
+
+            // User Confirms first, second, and fourth entry = uppercaseConfirm, lowercaseConfirm, numericalConfirm = True
+            // User denys third entry = specialConfirm = False
+
+        } else if (uppercaseConfirm == true && lowercaseConfirm == true && specialConfirm == false && numericalConfirm == true) {
+            for (i = 0; i < passwordLength; i++) {
+                let characterType = Math.floor(Math.random() * 3);
+
+                if (characterType == 0) {
+                    let randomUpper = uppercase[Math.floor(Math.random() * uppercase.length)];
+                    passwordArray[i] = randomUpper;
+                } else if (characterType == 1) {
+                    let randomLower = lowercase[Math.floor(Math.random() * lowercase.length)];
+                    passwordArray[i] = randomLower;
+                } else if (characterType == 3) {
+                    let randomNumber = numerical[Math.floor(Math.random() * 10)];
+                    passwordArray[i] = randomNumber;
+                }
+                let finalPassword = passwordArray.join("");
+                console.log(finalPassword);
+                return finalPassword;
+            }
+
+            // User denys first, and fourth entry = uppercaseConfirm, numericalConfirm = False
+            // User Confirms second, and third entry = lowercaseConfirm, specialConfirm = True
+
+        } else if (uppercaseConfirm == false && lowercaseConfirm == true && specialConfirm == true && numericalConfirm == false) {
+            for (i = 0; i < passwordLength; i++) {
+                let characterType = Math.floor(Math.random() * 2);
+
+                if (characterType == 1) {
+                    let randomLower = lowercase[Math.floor(Math.random() * lowercase.length)];
+                    passwordArray[i] = randomLower;
+                } else if (characterType == 2) {
+                    let randomSpecial = special[Math.floor(Math.random() * special.length)];
+                    passwordArray[i] = randomSpecial;
+                }
+                let finalPassword = passwordArray.join("");
+                console.log(finalPassword);
+                return finalPassword;
+            }
+
+            // User Confirms first, and fourth entry = uppercaseConfirm, numericalConfirm = True
+            // User denys second, and third entry = lowercaseConfirm, specialConfirm = False
+        } else if (uppercaseConfirm == true && lowercaseConfirm == false && specialConfirm == false && numericalConfirm == true) {
+            for (i = 0; i < passwordLength; i++) {
+                let characterType = Math.floor(Math.random() * 2);
+
+                if (characterType == 0) {
+                    let randomUpper = uppercase[Math.floor(Math.random() * uppercase.length)];
+                    passwordArray[i] = randomUpper;
+                } else if (characterType == 3) {
+                    let randomNumber = numerical[Math.floor(Math.random() * 10)];
+                    passwordArray[i] = randomNumber;
+                }
+                let finalPassword = passwordArray.join("");
+                console.log(finalPassword);
+                return finalPassword;
+            }
         }
+    }
+}

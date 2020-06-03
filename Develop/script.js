@@ -23,7 +23,7 @@ function generatePassword() {
     // If password criteria is less than 8 or more than 128 
     if (passwordLength < 8 || passwordLength > 128) {
         //Alerts user this doesn't work
-        alert("Sorry this doesn't meet the criteria");
+        alert("Sorry this doesn't meet the criteria, choose between 8-128 characters");
         //If criteria is met then function will run through statements
     } else {
         alert("You want " + passwordLength + " characters");
@@ -66,10 +66,9 @@ function generatePassword() {
                     let randomNumber = numerical[Math.floor(Math.random() * 10)];
                     passwordArray[i] = randomNumber;
                 }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
 
             // User confirms first three entries= uppercaseConfirm, lowercaseConfirm, specialConfirm = True  
             // User denyed last entry = numericalConfirm = False
@@ -88,10 +87,9 @@ function generatePassword() {
                     let randomSpecial = special[Math.floor(Math.random() * special.length)];
                     passwordArray[i] = randomSpecial;
                 }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
 
             // User confirms first two entries = uppercaseConfirm, lowercaseConfirm = True
             // User denyed last two entries = specialConfirm, numericalConfirm = False  
@@ -107,10 +105,9 @@ function generatePassword() {
                     let randomLower = lowercase[Math.floor(Math.random() * lowercase.length)];
                     passwordArray[i] = randomLower;
                 }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
 
             // User confirms first entry = uppercaseConfirm = True
             // User denyed last three entries = lowercaseConfirm, specialConfirm, numericalConfirm = False  
@@ -123,10 +120,9 @@ function generatePassword() {
                     let randomUpper = uppercase[Math.floor(Math.random() * uppercase.length)];
                     passwordArray[i] = randomUpper;
                 }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
 
             // User denys first entry = uppercaseConfirm = False
             // User Confirms last three entries = lowercaseConfirm, specialConfirm, numericalConfirm = True
@@ -145,10 +141,9 @@ function generatePassword() {
                     let randomNumber = numerical[Math.floor(Math.random() * 10)];
                     passwordArray[i] = randomNumber;
                 }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
 
             // User denys first two entries = uppercaseConfirm, lowercaseConfirm = False
             // User Confirms last two entries = specialConfirm, numericalConfirm = True
@@ -158,51 +153,42 @@ function generatePassword() {
                 let characterType = Math.floor(Math.random() * 2);
 
 
-                if (characterType == 2) {
+                if (characterType == 0) {
                     let randomSpecial = special[Math.floor(Math.random() * special.length)];
                     passwordArray[i] = randomSpecial;
-                } else if (characterType == 3) {
+                } else if (characterType == 1) {
                     let randomNumber = numerical[Math.floor(Math.random() * 10)];
                     passwordArray[i] = randomNumber;
                 }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
 
             // User denys first three entries = uppercaseConfirm, lowercaseConfirm, specialConfirm = False
             // User Confirms last entry = numericalConfirm = True
 
-        } else if (uppercaseConfirm == true && lowercaseConfirm == true && specialConfirm == true && numericalConfirm == true) {
+        } else if (uppercaseConfirm == false && lowercaseConfirm == false && specialConfirm == false && numericalConfirm == true) {
             for (i = 0; i < passwordLength; i++) {
-                let characterType = Math.floor(Math.random() * 1);
 
+                let randomNumber = numerical[Math.floor(Math.random() * 10)];
+                passwordArray[i] = randomNumber;
 
-                if (characterType == 3) {
-                    let randomNumber = numerical[Math.floor(Math.random() * 10)];
-                    passwordArray[i] = randomNumber;
-                }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
 
             // User denys first, third, and last entry = uppercaseConfirm, specialConfirm, numericalConfirm = False
             // User Confirms Second entry = lowercaseConfirm = True
 
         } else if (uppercaseConfirm == false && lowercaseConfirm == true && specialConfirm == false && numericalConfirm == false) {
             for (i = 0; i < passwordLength; i++) {
-                let characterType = Math.floor(Math.random() * 1);
 
-
-                if (characterType == 1) {
-                    let randomLower = lowercase[Math.floor(Math.random() * lowercase.length)];
-                    passwordArray[i] = randomLower;
-                }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                let randomLower = lowercase[Math.floor(Math.random() * lowercase.length)];
+                passwordArray[i] = randomLower;
             }
+            console.log(passwordArray)
+
+            return passwordArray.join("");
 
 
             // User Confirms first, third, and fourth entry = uppercaseConfirm, specialConfirm, numericalConfirm = True
@@ -215,33 +201,29 @@ function generatePassword() {
                 if (characterType == 0) {
                     let randomUpper = uppercase[Math.floor(Math.random() * uppercase.length)];
                     passwordArray[i] = randomUpper;
-                } else if (characterType == 2) {
+                } else if (characterType == 1) {
                     let randomSpecial = special[Math.floor(Math.random() * special.length)];
                     passwordArray[i] = randomSpecial;
-                } else if (characterType == 3) {
+                } else if (characterType == 2) {
                     let randomNumber = numerical[Math.floor(Math.random() * 10)];
                     passwordArray[i] = randomNumber;
                 }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
+
 
             // User denys first, second, and fourth entry = uppercaseConfirm, lowercaseConfirm, numericalConfirm = False
             // User Confirms third entry = specialConfirm = True
-
+            //
         } else if (uppercaseConfirm == false && lowercaseConfirm == false && specialConfirm == true && numericalConfirm == false) {
             for (i = 0; i < passwordLength; i++) {
-                let characterType = Math.floor(Math.random() * 1);
 
-                if (characterType == 2) {
-                    let randomSpecial = special[Math.floor(Math.random() * special.length)];
-                    passwordArray[i] = randomSpecial;
-                }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                let randomSpecial = special[Math.floor(Math.random() * special.length)];
+                passwordArray[i] = randomSpecial;
             }
+
+            return passwordArray.join("");
 
             // User Confirms first, second, and fourth entry = uppercaseConfirm, lowercaseConfirm, numericalConfirm = True
             // User denys third entry = specialConfirm = False
@@ -256,51 +238,70 @@ function generatePassword() {
                 } else if (characterType == 1) {
                     let randomLower = lowercase[Math.floor(Math.random() * lowercase.length)];
                     passwordArray[i] = randomLower;
-                } else if (characterType == 3) {
+                } else if (characterType == 2) {
                     let randomNumber = numerical[Math.floor(Math.random() * 10)];
                     passwordArray[i] = randomNumber;
                 }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
 
             // User denys first, and fourth entry = uppercaseConfirm, numericalConfirm = False
             // User Confirms second, and third entry = lowercaseConfirm, specialConfirm = True
 
         } else if (uppercaseConfirm == false && lowercaseConfirm == true && specialConfirm == true && numericalConfirm == false) {
             for (i = 0; i < passwordLength; i++) {
-                let characterType = Math.floor(Math.random() * 2);
+                let characterType = Math.floor(Math.random() * 3);
 
-                if (characterType == 1) {
+                if (characterType == 0) {
                     let randomLower = lowercase[Math.floor(Math.random() * lowercase.length)];
                     passwordArray[i] = randomLower;
-                } else if (characterType == 2) {
+                } else if (characterType == 1) {
                     let randomSpecial = special[Math.floor(Math.random() * special.length)];
                     passwordArray[i] = randomSpecial;
                 }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
+
 
             // User Confirms first, and fourth entry = uppercaseConfirm, numericalConfirm = True
             // User denys second, and third entry = lowercaseConfirm, specialConfirm = False
         } else if (uppercaseConfirm == true && lowercaseConfirm == false && specialConfirm == false && numericalConfirm == true) {
             for (i = 0; i < passwordLength; i++) {
-                let characterType = Math.floor(Math.random() * 2);
+                let characterType = Math.floor(Math.random() * 3);
 
                 if (characterType == 0) {
                     let randomUpper = uppercase[Math.floor(Math.random() * uppercase.length)];
                     passwordArray[i] = randomUpper;
-                } else if (characterType == 3) {
+                } else if (characterType == 1) {
                     let randomNumber = numerical[Math.floor(Math.random() * 10)];
                     passwordArray[i] = randomNumber;
                 }
-                let finalPassword = passwordArray.join("");
-                console.log(finalPassword);
-                return finalPassword;
+                console.log(passwordArray)
             }
+            return passwordArray.join("");
+
+            // User Confirms first, and third entry = uppercaseConfirm, special Confirm = True
+            // User denys second, and fourth entry = lowercaseConfirm, numericalConfirm = False
+        } else if (uppercaseConfirm == true && lowercaseConfirm == false && specialConfirm == true && numericalConfirm == false) {
+            for (i = 0; i < passwordLength; i++) {
+                let characterType = Math.floor(Math.random() * 3);
+
+                if (characterType == 0) {
+                    let randomUpper = uppercase[Math.floor(Math.random() * uppercase.length)];
+                    passwordArray[i] = randomUpper;
+                } else if (characterType == 1) {
+                    let randomSpecial = special[Math.floor(Math.random() * special.length)];
+                    passwordArray[i] = randomSpecial;
+                }
+                console.log(passwordArray)
+            }
+            return passwordArray.join("");
+
+            // User confirms first three entries= uppercaseConfirm, lowercaseConfirm, specialConfirm = True  
+            // User denyed last entry = numericalConfirm = False
+
         }
     }
 }

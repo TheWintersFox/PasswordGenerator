@@ -4,26 +4,34 @@ This repository is for creating a password generator
 
 ## Description 
 
-Your GitHub profile is an extremely important aspect of your public identity as a developer. A well-crafted one allows you to show off your work to other developers as well as potential employers. An important component of your GitHub profile—and one that many new developers often overlook—is the README.md file.
+This project was to create a working password generator that used 4 different types of text characters, those characters included..
 
-The quality of a README often differentiates a good project from a bad project. A good one takes advantage of the opportunity to explain and showcase what your application does, justify the technologies used, and even talk about some of the challenges you faced and features you hope to implement in the future. A good README helps you stand out among the large crowd of developers putting their work on GitHub.
+-Uppercase
+-Lowercase
+-SpecialCharacters
+-Numbers
 
-There's no one right way to structure a good README. There is one very wrong way, however, and that is to not include a README at all or to create a very anemic one. This guide outlines a few best practices. As you progress in your career, you will develop your own ideas about what makes a good README.
+Out of these 4 choices the user would be prompted after clicking the "generate password button".
+After being prompted the user would then go through the following text to choose True or False statements.
 
-At a minimum, your project README needs a title and a short description explaining the what, why, and how. What was your motivation? Why did you build this project? (Note: The answer is not "Because it was a homework assignment.") What problem does it solve? What did you learn? What makes your project stand out? If your project has a lot of features, consider adding a heading called "Features" and listing them here.
+---------
 
-If you're new to Markdown, read the GitHub guide on [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
+When going through the prompts the confirm or deny key is seen below
 
-If you need an example of a good README, check out [the VSCode repository](https://github.com/microsoft/vscode).
+"OK" button is = True
+That leaves the "cancel" button to be the = False
 
+---------
 
-## Table of Contents
+The prompt would then ask the user for the length of characters between 8-120 that they'd like this randomly generated password to be.  If the user chose numbers outside of this set criteria, an alert would prompt letting them know the criteria again to choose between 8-120.  
 
+At this point in the code everything is nested within a function inside of an if statement for all of the previous prompts.  Then the user would go to through the possible use cases for this website. You can see all possible choices below in the (#Tests)
 
+The password will then be written to the page after the user is done with confirming their #Test criteria.
 
----
+-------
 
-## Tests
+# Tests
 
 The tests you could run with this password generator = out to 16 possible user interactions.
 

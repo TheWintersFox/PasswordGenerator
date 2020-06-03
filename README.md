@@ -45,7 +45,7 @@ User confirms all 4 entries = uppercaseConfirm, lowercaseConfirm, specialConfirm
 ✓✓✓✓
 
 02.
-// User denyed all 4 entries = uppercaseConfirm, lowercaseConfirm, specialConfirm, numericalConfirm = False
+User denyed all 4 entries = uppercaseConfirm, lowercaseConfirm, specialConfirm, numericalConfirm = False
 ✗✗✗✗
 
 03.

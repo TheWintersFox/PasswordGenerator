@@ -17,13 +17,16 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
+// Function containing the prompts for the user criteria / all of the possible choices a user could make
 function generatePassword() {
     let passwordLength = prompt("How long would you like your password to be? Choose between 8-128 characters");
+
     // If password criteria is less than 8 or more than 128 
     if (passwordLength < 8 || passwordLength > 128) {
+
         //Alerts user this doesn't work
         alert("Sorry this doesn't meet the criteria, choose between 8-128 characters");
+
         //If criteria is met then function will run through statements
     } else {
         alert("You want " + passwordLength + " characters");

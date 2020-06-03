@@ -42,13 +42,11 @@ function generatePassword() {
         let passwordArray = [];
 
         // User denyed all 4 entries = uppercaseConfirm, lowercaseConfirm, specialConfirm, numericalConfirm = False 
-
         if (uppercaseConfirm !== true && lowercaseConfirm !== true && specialConfirm !== true && numericalConfirm !== true) {
             alert("You have to choose one");
 
 
             // User confirms all 4 entries = uppercaseConfirm, lowercaseConfirm, specialConfirm, numericalConfirm = True
-
         } else if (uppercaseConfirm == true && lowercaseConfirm == true && specialConfirm == true && numericalConfirm == true) {
             for (i = 0; i < passwordLength; i++) {
                 let characterType = Math.floor(Math.random() * 4);
@@ -72,7 +70,6 @@ function generatePassword() {
 
             // User confirms first three entries= uppercaseConfirm, lowercaseConfirm, specialConfirm = True  
             // User denyed last entry = numericalConfirm = False
-
         } else if (uppercaseConfirm == true && lowercaseConfirm == true && specialConfirm == true && numericalConfirm == false) {
             for (i = 0; i < passwordLength; i++) {
                 let characterType = Math.floor(Math.random() * 3);
@@ -93,7 +90,6 @@ function generatePassword() {
 
             // User confirms first two entries = uppercaseConfirm, lowercaseConfirm = True
             // User denyed last two entries = specialConfirm, numericalConfirm = False  
-
         } else if (uppercaseConfirm == true && lowercaseConfirm == true && specialConfirm == false && numericalConfirm == false) {
             for (i = 0; i < passwordLength; i++) {
                 let characterType = Math.floor(Math.random() * 2);
@@ -111,7 +107,6 @@ function generatePassword() {
 
             // User confirms first entry = uppercaseConfirm = True
             // User denyed last three entries = lowercaseConfirm, specialConfirm, numericalConfirm = False  
-
         } else if (uppercaseConfirm == true && lowercaseConfirm == false && specialConfirm == false && numericalConfirm == false) {
             for (i = 0; i < passwordLength; i++) {
                 let characterType = Math.floor(Math.random() * 1);
@@ -126,7 +121,6 @@ function generatePassword() {
 
             // User denys first entry = uppercaseConfirm = False
             // User Confirms last three entries = lowercaseConfirm, specialConfirm, numericalConfirm = True
-
         } else if (uppercaseConfirm == false && lowercaseConfirm == true && specialConfirm == true && numericalConfirm == true) {
             for (i = 0; i < passwordLength; i++) {
                 let characterType = Math.floor(Math.random() * 3);
@@ -147,7 +141,6 @@ function generatePassword() {
 
             // User denys first two entries = uppercaseConfirm, lowercaseConfirm = False
             // User Confirms last two entries = specialConfirm, numericalConfirm = True
-
         } else if (uppercaseConfirm == false && lowercaseConfirm == false && specialConfirm == true && numericalConfirm == true) {
             for (i = 0; i < passwordLength; i++) {
                 let characterType = Math.floor(Math.random() * 2);
@@ -166,7 +159,6 @@ function generatePassword() {
 
             // User denys first three entries = uppercaseConfirm, lowercaseConfirm, specialConfirm = False
             // User Confirms last entry = numericalConfirm = True
-
         } else if (uppercaseConfirm == false && lowercaseConfirm == false && specialConfirm == false && numericalConfirm == true) {
             for (i = 0; i < passwordLength; i++) {
 
@@ -179,7 +171,6 @@ function generatePassword() {
 
             // User denys first, third, and last entry = uppercaseConfirm, specialConfirm, numericalConfirm = False
             // User Confirms Second entry = lowercaseConfirm = True
-
         } else if (uppercaseConfirm == false && lowercaseConfirm == true && specialConfirm == false && numericalConfirm == false) {
             for (i = 0; i < passwordLength; i++) {
 
@@ -193,7 +184,6 @@ function generatePassword() {
 
             // User Confirms first, third, and fourth entry = uppercaseConfirm, specialConfirm, numericalConfirm = True
             // User denys Second entry = lowercaseConfirm = False
-
         } else if (uppercaseConfirm == true && lowercaseConfirm == false && specialConfirm == true && numericalConfirm == true) {
             for (i = 0; i < passwordLength; i++) {
                 let characterType = Math.floor(Math.random() * 3);
@@ -246,7 +236,6 @@ function generatePassword() {
 
             // User denys first, and fourth entry = uppercaseConfirm, numericalConfirm = False
             // User Confirms second, and third entry = lowercaseConfirm, specialConfirm = True
-
         } else if (uppercaseConfirm == false && lowercaseConfirm == true && specialConfirm == true && numericalConfirm == false) {
             for (i = 0; i < passwordLength; i++) {
                 let characterType = Math.floor(Math.random() * 3);

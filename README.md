@@ -23,11 +23,13 @@ That leaves the "cancel" button to be the = False
 
 ---------
 
-The prompt would then ask the user for the length of characters between 8-120 that they'd like this randomly generated password to be.  If the user chose numbers outside of this set criteria, an alert would prompt letting them know the criteria again to choose between 8-120.  
+The prompt would then ask the user for the length of characters between 8-120.  If the user chose numbers outside of this set criteria, an alert would prompt letting them know the criteria again to choose between 8-120.  
 
 At this point in the code everything is nested within a function inside of an if statement for all of the previous prompts.  Then the user would go to through the possible use cases for this website. You can see all possible choices below in the (#Tests)
 
 The password will then be written to the page after the user is done with confirming their #Test criteria.
+
+The password will then display based on the below criteria on the true/false = confirm/deny's that they choose.
 
 -------
 
@@ -110,7 +112,7 @@ User Confirms second, and third entry = lowercaseConfirm, specialConfirm = True
 
 15.
  User Confirms first, and third entry = uppercaseConfirm, special Confirm = True
- User denys second, and fourth entry = lowercaseConfirm, numericalConfirm = False15.
+ User denys second, and fourth entry = lowercaseConfirm, numericalConfirm = False
 ✓✗✓✗
 
 16.

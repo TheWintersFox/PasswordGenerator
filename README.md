@@ -31,7 +31,7 @@ The password will then be written to the page after the user is done with confir
 
 The password will then display based on the below criteria on the true/false = confirm/deny's that they choose.
 
--------
+--------
 
 # Tests
 
@@ -41,6 +41,8 @@ Labeling those interactions below
 
 ✓ = True
 ✗ = False
+
+--------
 
 01.
 User confirms all 4 entries = uppercaseConfirm, lowercaseConfirm, specialConfirm, numericalConfirm = True
